@@ -1,8 +1,23 @@
-package AtCoderBeginnersSelection
+package p03_ABC081B
 
 import (
 	"testing"
 )
+
+// [ABC081B - Shift only](https://atcoder.jp/contests/abc081/tasks/abc081_b)
+func AnswerABC081B(N int, A []int) int {
+	var opCount int
+
+	for {
+		if isAllEven(A) {
+			opCount++
+			A = toHalf(A)
+		} else {
+			return opCount
+		}
+	}
+
+}
 
 func isAllEven(numbers []int) bool {
 	for _, number := range numbers {
@@ -21,20 +36,6 @@ func toHalf(numbers []int) []int {
 	}
 
 	return halfNumbers
-}
-
-func AnswerABC081B(N int, A []int) int {
-	var opCount int
-
-	for {
-		if isAllEven(A) {
-			opCount++
-			A = toHalf(A)
-		} else {
-			return opCount
-		}
-	}
-
 }
 
 func TestAnswerABC081B(t *testing.T) {
