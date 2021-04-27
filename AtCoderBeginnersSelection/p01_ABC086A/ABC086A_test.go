@@ -1,7 +1,8 @@
-package AtCoderBeginnersSelection
+package p01_ABC086A
 
 import "testing"
 
+// [ABC086A - Product](https://atcoder.jp/contests/abc086/tasks/abc086_a)
 func AnswerABC086A(a int, b int) string {
 	product := a * b
 
