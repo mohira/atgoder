@@ -1,10 +1,11 @@
-package AtCoderBeginnersSelection
+package p02_ABC081A
 
 import (
 	"strings"
 	"testing"
 )
 
+// [ABC081A - Placing Marbles](https://atcoder.jp/contests/abc081/tasks/abc081_a)
 func AnswerABC081A(s1s2s3 string) int {
 	return strings.Count(s1s2s3, "1")
 }
