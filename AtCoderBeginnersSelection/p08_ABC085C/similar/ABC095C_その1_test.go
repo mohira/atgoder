@@ -1,10 +1,10 @@
-package p08_ABC088C
+package p08_ABC085C
 
 import (
 	"testing"
 )
 
-// [ABC088C - Half and Half](https://atcoder.jp/contests/abc088/tasks/arc086_a)
+// [ABC095C - Half and Half](https://atcoder.jp/contests/abc095/tasks/arc096_a)
 func AnswerABC096Cその1(A, B, C, X, Y int) int {
 	C = 2 * C // 半分サイズのピザは意味がないし、*2を忘れるので、ピザ1単位になるように補正
 

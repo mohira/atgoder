@@ -1,10 +1,10 @@
-package p08_ABC088C
+package p08_ABC085C
 
 import (
 	"testing"
 )
 
-// [ABC088C - Otoshidama](https://atcoder.jp/contests/abc088/tasks/arc086_a)
+// [ABC088C - Takahashi's Information](https://atcoder.jp/contests/abc088/tasks/arc086_a)
 func AnswerABC088Cその1(C [3][3]int) string {
 	// 探索範囲を絞って全探索
 	c11, c22, c33 := C[0][0], C[1][1], C[2][2]

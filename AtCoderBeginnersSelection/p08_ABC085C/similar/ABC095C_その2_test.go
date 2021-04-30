@@ -1,12 +1,12 @@
-package p08_ABC088C
+package p08_ABC085C
 
 import (
 	"math"
 	"testing"
 )
 
-// [ABC088C - Half and Half](https://atcoder.jp/contests/abc088/tasks/arc086_a)
-func AnswerABC096Cその2(A, B, C, X, Y int) int {
+// [ABC095C - Half and Half](https://atcoder.jp/contests/abc095/tasks/arc096_a)
+func AnswerABC095Cその2(A, B, C, X, Y int) int {
 	// 発想MEMO: 既知としたときに絞り込みに大きく影響する変数は何か？
 
 	// nA,nB,nCをそれぞれのピザの購入枚数とすると
@@ -88,7 +88,7 @@ func TestAnswerABC096Cその2(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := AnswerABC096Cその2(tt.A, tt.B, tt.C, tt.X, tt.Y)
+			got := AnswerABC095Cその2(tt.A, tt.B, tt.C, tt.X, tt.Y)
 
 			if got != tt.want {
 				t.Errorf("got %v want %v", got, tt.want)
