@@ -5,7 +5,7 @@ import (
 )
 
 // [ABC095C - Half and Half](https://atcoder.jp/contests/abc095/tasks/arc096_a)
-func AnswerABC096Cその1(A, B, C, X, Y int) int {
+func AnswerABC095Cその1(A, B, C, X, Y int) int {
 	C = 2 * C // 半分サイズのピザは意味がないし、*2を忘れるので、ピザ1単位になるように補正
 
 	// それぞれのピザの必要枚数(Cピザは2枚分==Aピザ1枚とBピザ1枚分に相当する)
@@ -53,7 +53,7 @@ func min(x, y int) int {
 	}
 }
 
-func TestAnswerABC096Cその1(t *testing.T) {
+func TestAnswerABC095Cその1(t *testing.T) {
 	tests := []struct {
 		name string
 		A    int
@@ -70,7 +70,7 @@ func TestAnswerABC096Cその1(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := AnswerABC096Cその1(tt.A, tt.B, tt.C, tt.X, tt.Y)
+			got := AnswerABC095Cその1(tt.A, tt.B, tt.C, tt.X, tt.Y)
 
 			if got != tt.want {
 				t.Errorf("got %v want %v", got, tt.want)
