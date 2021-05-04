@@ -25,13 +25,10 @@ func AnswerABC112Cその1(N int, XYH [][3]int) string {
 
 				// hi >= 1 が重要だ！！
 				// https://img.atcoder.jp/abc112/editorial.pdf を読む
-				if hi >= 1 {
+				if hi > 1 {
 					H = calcH(Cy, Cx, xi, yi, hi)
 
 					CxCyH = append(CxCyH, [3]int{Cx, Cy, H})
-					if Cx == 55 && Cy == 88 {
-						fmt.Println(xi, yi, hi, CxCyH)
-					}
 				}
 
 			}
@@ -109,6 +106,18 @@ func TestAnswerABC112Cその1(t *testing.T) {
 				{3, 93, 14},
 			},
 			"55 80 79"},
+
+		{"in09.txt: hi=0を含んでいて、かつ in04と同時に成立しない",
+			5,
+			[][3]int{
+				{32, 67, 0},
+				{32, 68, 1},
+				{33, 68, 0},
+				{31, 68, 0},
+				{32, 69, 0},
+			},
+			"32 68 1",
+		},
 	}
 
 	for _, tt := range tests {
