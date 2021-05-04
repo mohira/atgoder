@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-// [ABC096C \- Grid Repainting 2](https://atcoder.jp/contests/abc096/tasks/abc096_c)
+// [ABC096C - Grid Repainting 2](https://atcoder.jp/contests/abc096/tasks/abc096_c)
 func AnswerABC096Cその1(H, W int, S []string) string {
 	// すべての黒いマスは、上下左右に隣接するマスいずれかが黒でないといけない
 

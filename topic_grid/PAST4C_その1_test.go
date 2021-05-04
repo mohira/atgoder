@@ -7,7 +7,7 @@ import (
 
 // [第4回PAST C - 隣接カウント](https://atcoder.jp/contests/past202010-open/tasks/past202010_c?lang=ja)
 func AnswerPAST4Cその1(N, M int, S []string) string {
-	// N, M は分かりにくいいのでRenameしている
+	// N, M は分かりにくいのでRenameしている
 	H := N
 	W := M
 	board := toBoard(H, W, S)
