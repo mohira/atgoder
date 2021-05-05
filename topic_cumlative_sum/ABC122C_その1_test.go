@@ -50,6 +50,29 @@ func ACの出現回数の累積和(N int, S string) []int {
 	return cumSum
 }
 
+func main() {
+	// ACするコード
+	// 最大で 1200msくらい
+	// 入出力まわりでの高速化もできそう
+	//
+	// https://atcoder.jp/contests/abc122/submissions?f.Task=abc122_c&f.LanguageName=Go&f.Status=AC も参考にするとよさげ
+	var N, Q int
+	var S string
+	_, _ = fmt.Scan(&N, &Q, &S)
+
+	cumSum := ACの出現回数の累積和(N, S)
+
+	var li, ri int
+
+	for i := 0; i < Q; i++ {
+		_, _ = fmt.Scan(&li, &ri)
+
+		// li文字目からri文字目までの "AC" 出現回数
+		countAC := cumSum[ri] - cumSum[li]
+		fmt.Println(countAC)
+	}
+}
+
 func TestAnswerABC122Cその1(t *testing.T) {
 	tests := []struct {
 		name string
