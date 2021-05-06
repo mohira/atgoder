@@ -3,16 +3,20 @@
 ## 基本パターン
 
 ```go
-// 2^N 個のループ
-for bit := 0; bit < (1 << N); bit++ {
+package main
 
-// ON-OFFを対応させる
-for i := 0; i < N; i++ {
-// i番目のフラグがYESかどうかチェック
-if bit&(1<<i) > 0 {
-// なんかの処理
-}
-}
+func main() {
+  // 2^N 個のループ
+  for bit := 0; bit < (1 << N); bit++ {
+
+    // ON-OFFを対応させる
+    for i := 0; i < N; i++ {
+      // i番目のフラグがYESかどうかチェック
+      if bit&(1<<i) > 0 { // (bit>>i) & 1 == 1 でもOK
+        // なんかの処理
+      }
+    }
+  }
 }
 ```
 
@@ -193,13 +197,18 @@ func main() {
 
 		// 0番目からN-1番目(==N個)それぞれのフラグチェック
 		// 例えば、「部分集合をつくるときに、その要素を採用するか？」みたいなときに使える
-		for i := 0; i < N; i++ {
-			if (bit & (1 << i)) > 0 {
-				// 要素に含める処理
-				subset = append(subset, A[i])
-			}
-		}
-		fmt.Println(subset)
-	}
+      for i := 0; i < N; i++ {
+        if (bit & (1 << i)) > 0 {
+          // 要素に含める処理
+          subset = append(subset, A[i])
+        }
+      }
+      fmt.Println(subset)
+    }
 }
 ```
+
+### `(bit>>i)&1 == 1`: もっとスッキリした書き方
+
+- https://youtu.be/ENSOy8u9K9I?t=2163 を参考にするとよい
+

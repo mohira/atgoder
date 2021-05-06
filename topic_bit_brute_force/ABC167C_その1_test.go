@@ -18,7 +18,8 @@ func AnswerABC167Cその1(N, M, X int, CA [][]int) int {
 		var bookSkills = make([][]int, 0, N)
 
 		for i := 0; i < N; i++ {
-			if bit&(1<<i) > 0 {
+			//if bit&(1<<i) > 0 でもOK
+			if (bit>>i)&1 == 1 {
 				price, skills := CA[i][0], CA[i][1:]
 
 				bookSkills = append(bookSkills, skills)
