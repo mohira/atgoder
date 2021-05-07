@@ -6,14 +6,14 @@ import (
 )
 
 // [ABC095A - Something on It](https://atcoder.jp/contests/abc095/tasks/abc095_a)
-func AnswerABC095A(S string) int {
+func AnswerABC095Aその1(S string) int {
 	basePrice := 700
 	toppingsPrice := 100 * strings.Count(S, "o")
 
 	return basePrice + toppingsPrice
 }
 
-func TestABC095A(t *testing.T) {
+func TestAnswerABC095Aその1(t *testing.T) {
 	tests := []struct {
 		name string
 		S    string
@@ -26,7 +26,7 @@ func TestABC095A(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := AnswerABC095A(tt.S)
+			got := AnswerABC095Aその1(tt.S)
 
 			if got != tt.want {
 				t.Errorf("got %v want %v", got, tt.want)

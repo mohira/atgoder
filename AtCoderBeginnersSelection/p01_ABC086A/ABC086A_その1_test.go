@@ -3,7 +3,7 @@ package p01_ABC086A
 import "testing"
 
 // [ABC086A - Product](https://atcoder.jp/contests/abc086/tasks/abc086_a)
-func AnswerABC086A(a int, b int) string {
+func AnswerABC086Aその1(a int, b int) string {
 	product := a * b
 
 	if product%2 == 0 {
@@ -13,7 +13,7 @@ func AnswerABC086A(a int, b int) string {
 	}
 }
 
-func TestAnswerABC086A(t *testing.T) {
+func TestAnswerABC086Aその1(t *testing.T) {
 	tests := []struct {
 		name string
 		a    int
@@ -26,7 +26,7 @@ func TestAnswerABC086A(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := AnswerABC086A(tt.a, tt.b)
+			got := AnswerABC086Aその1(tt.a, tt.b)
 
 			if got != tt.want {
 				t.Errorf("got %v want %v", got, tt.want)

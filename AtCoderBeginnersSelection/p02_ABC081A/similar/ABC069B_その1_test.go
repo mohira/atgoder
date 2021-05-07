@@ -6,7 +6,7 @@ import (
 )
 
 // [ABC069B - i18n](https://atcoder.jp/contests/abc069/tasks/abc069_b)
-func AnswerABC069B(s string) string {
+func AnswerABC069Bその1(s string) string {
 	head := string(s[0])
 	tail := string(s[len(s)-1])
 
@@ -15,7 +15,7 @@ func AnswerABC069B(s string) string {
 	return fmt.Sprintf("%s%d%s", head, length, tail)
 }
 
-func TestABC069B(t *testing.T) {
+func TestAnswerABC069Bその1(t *testing.T) {
 	tests := []struct {
 		name string
 		s    string
@@ -28,7 +28,7 @@ func TestABC069B(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := AnswerABC069B(tt.s)
+			got := AnswerABC069Bその1(tt.s)
 
 			if got != tt.want {
 				t.Errorf("got %v want %v", got, tt.want)

@@ -5,7 +5,7 @@ import (
 )
 
 // [ABC081B - Shift only](https://atcoder.jp/contests/abc081/tasks/abc081_b)
-func AnswerABC081B(N int, A []int) int {
+func AnswerABC081Bその1(N int, A []int) int {
 	var opCount int
 
 	for {
@@ -38,7 +38,7 @@ func toHalf(numbers []int) []int {
 	return halfNumbers
 }
 
-func TestAnswerABC081B(t *testing.T) {
+func TestAnswerABC081Bその1(t *testing.T) {
 	tests := []struct {
 		name string
 		N    int
@@ -52,7 +52,7 @@ func TestAnswerABC081B(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := AnswerABC081B(tt.N, tt.A)
+			got := AnswerABC081Bその1(tt.N, tt.A)
 
 			if got != tt.want {
 				t.Errorf("got %v want %v", got, tt.want)

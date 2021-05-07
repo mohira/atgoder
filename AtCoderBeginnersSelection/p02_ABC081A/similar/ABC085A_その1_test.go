@@ -6,11 +6,11 @@ import (
 )
 
 // [ABC085A - Already 2018](https://atcoder.jp/contests/abc085/tasks/abc085_a)
-func AnswerABC085A(S string) string {
+func AnswerABC085Aその1(S string) string {
 	return strings.Replace(S, "2017", "2018", 1)
 }
 
-func TestABC085A(t *testing.T) {
+func TestAnswerABC085Aその1(t *testing.T) {
 	tests := []struct {
 		name string
 		S    string
@@ -22,7 +22,7 @@ func TestABC085A(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := AnswerABC085A(tt.S)
+			got := AnswerABC085Aその1(tt.S)
 
 			if got != tt.want {
 				t.Errorf("got %v want %v", got, tt.want)

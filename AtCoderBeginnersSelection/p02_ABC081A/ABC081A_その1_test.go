@@ -6,11 +6,11 @@ import (
 )
 
 // [ABC081A - Placing Marbles](https://atcoder.jp/contests/abc081/tasks/abc081_a)
-func AnswerABC081A(s1s2s3 string) int {
+func AnswerABC081Aその1(s1s2s3 string) int {
 	return strings.Count(s1s2s3, "1")
 }
 
-func TestABC081A(t *testing.T) {
+func TestAnswerABC081Aその1(t *testing.T) {
 	tests := []struct {
 		name   string
 		s1s2s3 string
@@ -22,7 +22,7 @@ func TestABC081A(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := AnswerABC081A(tt.s1s2s3)
+			got := AnswerABC081Aその1(tt.s1s2s3)
 
 			if got != tt.want {
 				t.Errorf("got %v want %v", got, tt.want)

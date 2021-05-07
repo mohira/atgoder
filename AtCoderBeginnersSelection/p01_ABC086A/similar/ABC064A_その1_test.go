@@ -5,7 +5,7 @@ import (
 )
 
 // [ABC064A - RGB Cards](https://atcoder.jp/contests/abc064/tasks/abc064_a)
-func AnswerABC064A(r int, g int, b int) string {
+func AnswerABC064Aその1(r int, g int, b int) string {
 	n := 100*r + 10*g + b
 
 	if n%4 == 0 {
@@ -15,7 +15,7 @@ func AnswerABC064A(r int, g int, b int) string {
 	}
 }
 
-func TestAnswerABC064A(t *testing.T) {
+func TestAnswerABC064Aその1(t *testing.T) {
 	tests := []struct {
 		name string
 		r    int
@@ -29,7 +29,7 @@ func TestAnswerABC064A(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := AnswerABC064A(tt.r, tt.g, tt.b)
+			got := AnswerABC064Aその1(tt.r, tt.g, tt.b)
 
 			if got != tt.want {
 				t.Errorf("got %v want %v", got, tt.want)

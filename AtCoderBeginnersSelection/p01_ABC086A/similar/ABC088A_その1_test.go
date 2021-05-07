@@ -5,7 +5,7 @@ import (
 )
 
 // [ABC088A - Infinite Coins](https://atcoder.jp/contests/abc088/tasks/abc088_a)
-func AnswerABC088A(N int, A int) string {
+func AnswerABC088Aその1(N int, A int) string {
 	// 500円を使い切る → 残りがA円以下ならぴったり支払いが可能
 	if N%500 <= A {
 		return "Yes"
@@ -14,7 +14,7 @@ func AnswerABC088A(N int, A int) string {
 	}
 }
 
-func TestAnswerABC088A(t *testing.T) {
+func TestAnswerABC088Aその1(t *testing.T) {
 	tests := []struct {
 		name string
 		N    int
@@ -33,7 +33,7 @@ func TestAnswerABC088A(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := AnswerABC088A(tt.N, tt.A)
+			got := AnswerABC088Aその1(tt.N, tt.A)
 
 			if got != tt.want {
 				t.Errorf("got %v want %v", got, tt.want)

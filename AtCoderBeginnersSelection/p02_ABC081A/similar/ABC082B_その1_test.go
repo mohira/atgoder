@@ -67,7 +67,7 @@ func sortCharactersAsc(s string) []int {
 	return a
 }
 
-func TestABC082Bその1(t *testing.T) {
+func TestAnswerABC082Bその1(t *testing.T) {
 	tests := []struct {
 		name string
 		s    string

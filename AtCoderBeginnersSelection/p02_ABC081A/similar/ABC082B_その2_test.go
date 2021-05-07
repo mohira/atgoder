@@ -5,6 +5,16 @@ import (
 	"testing"
 )
 
+// [ABC082B - Two Anagrams](https://atcoder.jp/contests/abc082/tasks/abc082_b)
+// 文字列の比較演算で解決する
+func AnswerABC082Bその2(s string, t string) string {
+	if sortStringAsc(s) < sortStringDesc(t) {
+		return "Yes"
+	} else {
+		return "No"
+	}
+}
+
 func toIntSliceFromString(s string) []int {
 	var slice []int
 
@@ -41,17 +51,7 @@ func sortStringDesc(t string) string {
 	return toStringFromIntSlice(intSlice)
 }
 
-// [ABC082B - Two Anagrams](https://atcoder.jp/contests/abc082/tasks/abc082_b)
-// 文字列の比較演算で解決する
-func AnswerABC082Bその2(s string, t string) string {
-	if sortStringAsc(s) < sortStringDesc(t) {
-		return "Yes"
-	} else {
-		return "No"
-	}
-}
-
-func TestABC082Bその2(t *testing.T) {
+func TestAnswerABC082Bその2(t *testing.T) {
 	tests := []struct {
 		name string
 		s    string
