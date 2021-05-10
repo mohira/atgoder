@@ -6,6 +6,7 @@ import (
 
 // [ABC035C - オセロ](https://atcoder.jp/contests/tokiomarine2020/tasks/tokiomarine2020_c)
 func AnswerABC035Cその1(N, Q int, LR [][]int) string {
+	// いもす法
 	var S = make([]int, N+1)
 
 	for _, lr := range LR {

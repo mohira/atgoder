@@ -6,6 +6,7 @@ import (
 
 // [ABC014C - AtColor](https://atcoder.jp/contests/abc014/tasks/abc014_3)
 func AnswerABC014Cその1(N int, AB [][]int) int {
+	// いもす法
 	var S = make([]int, (1e+6)+2)
 	for _, ab := range AB {
 		a, b := ab[0], ab[1]

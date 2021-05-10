@@ -7,3 +7,8 @@
 ## [ABC105D - Candy Distribution](https://atcoder.jp/contests/abc105/tasks/abc105_d)
 
 <img width="1616" alt="image.png (2.1 MB)" src="https://img.esa.io/uploads/production/attachments/6586/2021/05/10/21054/7efe3b9c-380b-47cb-a4cf-90e80525b969.png">
+
+## [ABC183D - Water Heater](https://atcoder.jp/contests/abc183/tasks/abc183_d)
+
+<img width="1694" alt="image.png (2.1 MB)" src="https://img.esa.io/uploads/production/attachments/6586/2021/05/10/21054/db898146-5e60-4c6a-8b8a-330dfa12f2cd.png">
+``
