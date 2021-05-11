@@ -17,7 +17,7 @@ func AnswerABC141Cその1(N, K, Q int, A []int) string {
 			imos[q+1]--
 		}
 	}
-	cumsum := getCumulativeSum(len(imos), imos)
+	cumsum := getCumulativeSum(imos)
 
 	var ans string
 	for _, s := range cumsum[2:] {

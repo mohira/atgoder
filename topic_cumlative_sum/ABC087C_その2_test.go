@@ -21,8 +21,8 @@ func AnswerABC087Cその2(N int, A [2][]int) int {
 	// 下段での獲得アメ数 = 28 - 6 = (下段のアメ総数) - (i=2(3-1)で獲得できたはずのアメ数)
 
 	// 累積和をもとめる
-	line1 := getCumulativeSum(N, A[0])
-	line2 := getCumulativeSum(N, A[1])
+	line1 := getCumulativeSum(A[0])
+	line2 := getCumulativeSum(A[1])
 
 	var maxCandies int
 
@@ -41,7 +41,8 @@ func AnswerABC087Cその2(N int, A [2][]int) int {
 	return maxCandies
 }
 
-func getCumulativeSum(N int, A []int) []int {
+func getCumulativeSum(A []int) []int {
+	N := len(A)
 	sums := make([]int, 0, N+1)
 	sums = append(sums, 0)
 
