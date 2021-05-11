@@ -1,4 +1,4 @@
-package topic_concatenate_to_string
+package topic_manipulate_digit
 
 import (
 	"strconv"
