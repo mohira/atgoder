@@ -21,7 +21,7 @@ func AnswerABC096Cその1(H, W int, S []string) string {
 
 	var canDraw = true
 
-	canvas := toCanvas(H, W, S)
+	canvas := toStringBoard(H, W, S)
 
 	for i := 0; i < H; i++ {
 		for j := 0; j < W; j++ {
@@ -54,21 +54,6 @@ func AnswerABC096Cその1(H, W int, S []string) string {
 	} else {
 		return "No"
 	}
-}
-
-func toCanvas(H int, W int, S []string) [][]string {
-	var canvas = make([][]string, H)
-	for i := 0; i < H; i++ {
-		canvas[i] = make([]string, W)
-	}
-
-	for i := 0; i < H; i++ {
-		for j := 0; j < W; j++ {
-			canvas[i][j] = string(S[i][j])
-		}
-	}
-
-	return canvas
 }
 
 func TestAnswerABC096Cその1(t *testing.T) {
