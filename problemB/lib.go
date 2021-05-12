@@ -21,3 +21,17 @@ func findMax(nums []int) int {
 	}
 	return max
 }
+
+func isPalindrome(s string) bool {
+	return reverseStr(s) == s
+}
+
+func reverseStr(s string) string {
+	var rs string
+
+	for i := len(s) - 1; i >= 0; i-- {
+		rs += string(s[i])
+	}
+
+	return rs
+}
