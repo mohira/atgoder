@@ -2,6 +2,22 @@ package problemB
 
 import "math"
 
+func min(x, y int) int {
+	if x < y {
+		return x
+	} else {
+		return y
+	}
+}
+
+func max(x, y int) int {
+	if x < y {
+		return y
+	} else {
+		return x
+	}
+}
+
 func findMin(nums []int) int {
 	var min = math.MaxInt32
 	for _, n := range nums {
