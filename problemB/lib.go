@@ -51,3 +51,11 @@ func reverseStr(s string) string {
 
 	return rs
 }
+
+func isLower(r rune) bool {
+	return 'a' <= r && r <= 'z'
+}
+
+func isUpper(r rune) bool {
+	return 'A' <= r && r <= 'Z'
+}
