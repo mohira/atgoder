@@ -38,6 +38,18 @@ func findMax(nums []int) int {
 	return max
 }
 
+// 整数区間の和を求める
+//   first last
+//   ↓     ↓
+//   3 4 5 6 => 18
+func sumIntRange(first, last int) int {
+	return sumFrom1toN(last) - sumFrom1toN(first-1)
+}
+
+func sumFrom1toN(n int) int {
+	return n * (n + 1) / 2
+}
+
 func isPalindrome(s string) bool {
 	return reverseStr(s) == s
 }
