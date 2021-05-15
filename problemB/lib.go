@@ -2,6 +2,14 @@ package problemB
 
 import "math"
 
+func absInt(x int) int {
+	if x < 0 {
+		return -x
+	} else {
+		return x
+	}
+}
+
 func min(x, y int) int {
 	if x < y {
 		return x
