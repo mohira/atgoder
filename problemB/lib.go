@@ -58,6 +58,14 @@ func sumFrom1toN(n int) int {
 	return n * (n + 1) / 2
 }
 
+func sumInts(nums []int) int {
+	var total int
+	for _, num := range nums {
+		total += num
+	}
+	return total
+}
+
 func isPalindrome(s string) bool {
 	return reverseStr(s) == s
 }
