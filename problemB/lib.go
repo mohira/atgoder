@@ -79,3 +79,26 @@ func isLower(r rune) bool {
 func isUpper(r rune) bool {
 	return 'A' <= r && r <= 'Z'
 }
+
+// greatest common divisor (GCD) via Euclidean algorithm
+func GCD(a, b int) int {
+	for b != 0 {
+		t := b
+		b = a % b
+		a = t
+	}
+	return a
+}
+
+// find Least Common Multiple (LCM) via GCD
+func LCM(integers []int) int {
+	a := integers[0]
+	b := integers[1]
+	result := a * b / GCD(a, b)
+
+	for _, integer := range integers[2:] {
+		result = LCM([]int{result, integer})
+	}
+
+	return result
+}
