@@ -1,4 +1,4 @@
-package p08_ABC085C
+package topic_math
 
 import (
 	"testing"
