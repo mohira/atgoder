@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"math"
 	"testing"
 )
@@ -9,10 +10,10 @@ import (
 func AnswerABC129Bその2(N int, W []int) int {
 	var minDiff = math.MaxInt64
 	for i := 1; i < N; i++ {
-		s1 := sumInts(W[:i])
-		s2 := sumInts(W[i:])
+		s1 := lib.SumInts(W[:i])
+		s2 := lib.SumInts(W[i:])
 
-		minDiff = min(minDiff, absInt(s1-s2))
+		minDiff = lib.Min(minDiff, lib.AbsInt(s1-s2))
 	}
 
 	return minDiff

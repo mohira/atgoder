@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -11,7 +12,7 @@ func AnswerABC181Bその1(N int, AB [][]int) int {
 	for i := 0; i < N; i++ {
 		a, b := AB[i][0], AB[i][1]
 
-		sum += sumIntRange(a, b)
+		sum += lib.SumIntRange(a, b)
 	}
 
 	return sum

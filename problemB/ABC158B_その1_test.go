@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -10,7 +11,7 @@ func AnswerABC158Bその1(N, A, B int) int {
 	q, r := N/(A+B), N%(A+B)
 
 	ans += q * A
-	ans += min(r, A)
+	ans += lib.Min(r, A)
 
 	return ans
 }

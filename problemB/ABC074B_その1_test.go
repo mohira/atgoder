@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -9,9 +10,9 @@ func AnswerABC074Bその1(N, K int, X []int) int {
 	var ans int
 
 	for _, x := range X {
-		da := 2 * absInt(x-0)
-		db := 2 * absInt(x-K)
-		ans += min(da, db)
+		da := 2 * lib.AbsInt(x-0)
+		db := 2 * lib.AbsInt(x-K)
+		ans += lib.Min(da, db)
 	}
 
 	return ans

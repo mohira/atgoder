@@ -1,13 +1,14 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
 // [ABC178B - Product Max](https://atcoder.jp/contests/abc178/tasks/abc178_b)
 func AnswerABC178Bその1(a, b, c, d int) int {
 	// 1行でも書ける
-	// return max(max(a*c, a*d), max(b*c, b*d))
+	// return Max(Max(a*c, a*d), Max(b*c, b*d))
 
 	xs := []int{a, b}
 	ys := []int{c, d}
@@ -18,7 +19,7 @@ func AnswerABC178Bその1(a, b, c, d int) int {
 		for _, y := range ys {
 			product := x * y
 
-			productMax = max(productMax, product)
+			productMax = lib.Max(productMax, product)
 		}
 	}
 

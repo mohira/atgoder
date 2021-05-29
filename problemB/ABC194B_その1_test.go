@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"math"
 	"testing"
 )
@@ -16,7 +17,7 @@ func AnswerABC194Bその1(N int, AB [][]int) int {
 				continue
 			}
 			b := AB[j][1]
-			ans1 = min(ans1, max(a, b))
+			ans1 = lib.Min(ans1, lib.Max(a, b))
 		}
 	}
 
@@ -25,10 +26,10 @@ func AnswerABC194Bその1(N int, AB [][]int) int {
 	for i := 0; i < N; i++ {
 		a, b := AB[i][0], AB[i][1]
 
-		ans2 = min(ans2, a+b)
+		ans2 = lib.Min(ans2, a+b)
 	}
 
-	return min(ans1, ans2)
+	return lib.Min(ans1, ans2)
 }
 
 func TestAnswerABC194Bその1(t *testing.T) {

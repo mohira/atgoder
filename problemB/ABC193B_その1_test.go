@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"math"
 	"testing"
 )
@@ -14,7 +15,7 @@ func AnswerABC193Bその1(N int, APX [][]int) int {
 
 		canBuy := x-a > 0
 		if canBuy {
-			minPrice = min(minPrice, p)
+			minPrice = lib.Min(minPrice, p)
 		}
 	}
 

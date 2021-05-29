@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -15,7 +16,7 @@ func AnswerABC052Bその1(N int, S string) int {
 			x--
 		}
 
-		maxValue = max(maxValue, x)
+		maxValue = lib.Max(maxValue, x)
 	}
 
 	return maxValue

@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"errors"
 	"log"
 	"testing"
@@ -18,7 +19,7 @@ func AnswerABC177Bその1(S, T string) int {
 			log.Fatal(err)
 		}
 
-		maxMatch = max(maxMatch, count)
+		maxMatch = lib.Max(maxMatch, count)
 	}
 
 	return len(T) - maxMatch

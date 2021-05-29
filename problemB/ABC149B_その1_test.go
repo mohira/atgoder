@@ -1,14 +1,15 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"fmt"
 	"testing"
 )
 
 // [ABC149B - Achieve the Goal](https://atcoder.jp/contests/abc149/tasks/abc149_b)
 func AnswerABC149Bその1(A, B, K int) string {
-	A, K = max(0, A-K), max(0, K-A)
-	B, K = max(0, B-K), max(0, K-B)
+	A, K = lib.Max(0, A-K), lib.Max(0, K-A)
+	B, K = lib.Max(0, B-K), lib.Max(0, K-B)
 
 	return fmt.Sprintf("%d %d", A, B)
 }

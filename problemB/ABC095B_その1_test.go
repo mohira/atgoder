@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -17,7 +18,7 @@ func AnswerABC095Bその1(N, M, X int, A []int) int {
 		}
 	}
 
-	return min(leftGates, rightGates)
+	return lib.Min(leftGates, rightGates)
 }
 
 func TestAnswerABC095Bその1(t *testing.T) {

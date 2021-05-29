@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"math"
 	"testing"
 )
@@ -13,14 +14,14 @@ func AnswerABC129Bその1(N int, W []int) int {
 		cumsum[i] = cumsum[i-1] + W[i-1]
 	}
 
-	total := sumInts(W)
+	total := lib.SumInts(W)
 
 	var minDiff = math.MaxInt64
 	for i := 0; i < N; i++ {
 		s1 := cumsum[i]
 		s2 := total - cumsum[i]
 
-		minDiff = min(minDiff, absInt(s1-s2))
+		minDiff = lib.Min(minDiff, lib.AbsInt(s1-s2))
 	}
 
 	return minDiff

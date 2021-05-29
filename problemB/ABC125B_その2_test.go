@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -17,7 +18,7 @@ func AnswerABC125Bその2(N int, V, C []int) int {
 			}
 		}
 
-		ans = max(tmpValues, ans)
+		ans = lib.Max(tmpValues, ans)
 	}
 
 	return ans

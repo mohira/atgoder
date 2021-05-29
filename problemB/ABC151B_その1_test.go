@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -14,7 +15,7 @@ func AnswerABC151Bその1(N, K, M int, A []int) int {
 	diff := N*M - total
 
 	if diff <= K {
-		return max(diff, 0)
+		return lib.Max(diff, 0)
 	} else {
 		return -1
 	}

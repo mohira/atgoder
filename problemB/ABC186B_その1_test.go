@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -9,7 +10,7 @@ func AnswerABC186Bその1(H, W int, A [][]int) int {
 	var minBlock = 100
 	for i := 0; i < H; i++ {
 		for j := 0; j < W; j++ {
-			minBlock = min(minBlock, A[i][j])
+			minBlock = lib.Min(minBlock, A[i][j])
 		}
 	}
 

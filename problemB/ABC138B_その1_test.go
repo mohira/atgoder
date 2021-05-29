@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"math"
 	"testing"
 )
@@ -12,7 +13,7 @@ func AnswerABC138Bその1(N int, A []int) float64 {
 		return float64(A[0])
 	}
 
-	lcm := LCM(A)
+	lcm := lib.LCM(A)
 
 	denominator := 0
 	for _, a := range A {

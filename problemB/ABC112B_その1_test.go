@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"math"
 	"strconv"
 	"testing"
@@ -13,7 +14,7 @@ func AnswerABC112Bその1(N, T int, CT [][]int) string {
 		c, t := ct[0], ct[1]
 
 		if t <= T {
-			minCost = min(minCost, c)
+			minCost = lib.Min(minCost, c)
 		}
 	}
 

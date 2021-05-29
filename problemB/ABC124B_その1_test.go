@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -17,7 +18,7 @@ func AnswerABC124Bその1(N int, H []int) int {
 			count++
 		}
 
-		maxH = max(maxH, h)
+		maxH = lib.Max(maxH, h)
 	}
 
 	return count

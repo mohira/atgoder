@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"strings"
 	"testing"
 )
@@ -19,7 +20,7 @@ func AnswerABC104Bその1(S string) string {
 		if c == 'A' || c == 'C' {
 			continue
 		}
-		if !isLower(c) {
+		if !lib.IsLower(c) {
 			cond3 = false
 		}
 	}

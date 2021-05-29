@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -27,7 +28,7 @@ func AnswerABC098Bその1(N int, S string) int {
 			}
 		}
 
-		maxCount = max(maxCount, count)
+		maxCount = lib.Max(maxCount, count)
 	}
 	return maxCount
 }

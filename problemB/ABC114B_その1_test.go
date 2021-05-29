@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"math"
 	"strconv"
 	"testing"
@@ -16,8 +17,8 @@ func AnswerABC114Bその1(S string) int {
 			panic(err)
 		}
 
-		absDiff := absInt(X - 753)
-		minDiff = min(minDiff, absDiff)
+		absDiff := lib.AbsInt(X - 753)
+		minDiff = lib.Min(minDiff, absDiff)
 	}
 
 	return minDiff

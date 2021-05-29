@@ -1,8 +1,8 @@
-package problemB
+package lib
 
 import "math"
 
-func absInt(x int) int {
+func AbsInt(x int) int {
 	if x < 0 {
 		return -x
 	} else {
@@ -10,7 +10,7 @@ func absInt(x int) int {
 	}
 }
 
-func min(x, y int) int {
+func Min(x, y int) int {
 	if x < y {
 		return x
 	} else {
@@ -18,7 +18,7 @@ func min(x, y int) int {
 	}
 }
 
-func max(x, y int) int {
+func Max(x, y int) int {
 	if x < y {
 		return y
 	} else {
@@ -26,7 +26,7 @@ func max(x, y int) int {
 	}
 }
 
-func findMin(nums []int) int {
+func FindMin(nums []int) int {
 	var min = math.MaxInt32
 	for _, n := range nums {
 		if n < min {
@@ -36,7 +36,7 @@ func findMin(nums []int) int {
 	return min
 }
 
-func findMax(nums []int) int {
+func FindMax(nums []int) int {
 	var max = -math.MaxInt32
 	for _, n := range nums {
 		if max < n {
@@ -46,19 +46,19 @@ func findMax(nums []int) int {
 	return max
 }
 
-// 整数区間の和を求める
+// SumIntRange 整数区間の和を求める
 //   first last
 //   ↓     ↓
 //   3 4 5 6 => 18
-func sumIntRange(first, last int) int {
-	return sumFrom1toN(last) - sumFrom1toN(first-1)
+func SumIntRange(first, last int) int {
+	return SumFrom1toN(last) - SumFrom1toN(first-1)
 }
 
-func sumFrom1toN(n int) int {
+func SumFrom1toN(n int) int {
 	return n * (n + 1) / 2
 }
 
-func sumInts(nums []int) int {
+func SumInts(nums []int) int {
 	var total int
 	for _, num := range nums {
 		total += num
@@ -66,11 +66,11 @@ func sumInts(nums []int) int {
 	return total
 }
 
-func isPalindrome(s string) bool {
-	return reverseStr(s) == s
+func IsPalindrome(s string) bool {
+	return ReverseStr(s) == s
 }
 
-func reverseStr(s string) string {
+func ReverseStr(s string) string {
 	var rs string
 
 	for i := len(s) - 1; i >= 0; i-- {
@@ -80,15 +80,15 @@ func reverseStr(s string) string {
 	return rs
 }
 
-func isLower(r rune) bool {
+func IsLower(r rune) bool {
 	return 'a' <= r && r <= 'z'
 }
 
-func isUpper(r rune) bool {
+func IsUpper(r rune) bool {
 	return 'A' <= r && r <= 'Z'
 }
 
-// greatest common divisor (GCD) via Euclidean algorithm
+// GCD greatest common divisor (GCD) via Euclidean algorithm
 func GCD(a, b int) int {
 	for b != 0 {
 		t := b
@@ -98,7 +98,7 @@ func GCD(a, b int) int {
 	return a
 }
 
-// find Least Common Multiple (LCM) via GCD
+// LCM find Least Common Multiple (LCM) via GCD
 func LCM(integers []int) int {
 	a := integers[0]
 	b := integers[1]

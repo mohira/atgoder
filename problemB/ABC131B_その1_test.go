@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"math"
 	"testing"
 )
@@ -17,7 +18,7 @@ func AnswerABC131Bその1(N, L int) int {
 	var minDiff = math.MaxInt64
 	for i := 1; i <= N; i++ {
 		flavor := L + i - 1
-		diff := absInt(flavor)
+		diff := lib.AbsInt(flavor)
 
 		if diff < minDiff {
 			ans = totalFlavor - flavor

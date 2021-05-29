@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -10,7 +11,7 @@ func AnswerABC184Bその1(N, X int, S string) int {
 
 	for _, c := range S {
 		if c == 'x' {
-			point = max(point-1, 0)
+			point = lib.Max(point-1, 0)
 		} else {
 			point++
 		}

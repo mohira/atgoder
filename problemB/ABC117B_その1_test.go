@@ -1,13 +1,14 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
 // [ABC117B - Can you solve this?](https://atcoder.jp/contests/abc117/tasks/abc117_b)
 func AnswerABC117Bその1(N int, L []int) string {
-	var total = sumInts(L)
-	var maxL = findMax(L)
+	var total = lib.SumInts(L)
+	var maxL = lib.FindMax(L)
 
 	if maxL < total-maxL {
 		return "Yes"

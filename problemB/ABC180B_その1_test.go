@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"math"
 	"testing"
 )
@@ -13,7 +14,7 @@ func AnswerABC180Bその1(N int, X []int) (int, float64, int) {
 func chebyshevDistance(nums []int) int {
 	var distance int
 	for _, num := range nums {
-		distance = max(distance, absInt(num))
+		distance = lib.Max(distance, lib.AbsInt(num))
 	}
 
 	return distance
@@ -33,7 +34,7 @@ func manhattanDistance(nums []int) int {
 	var distance int
 
 	for _, num := range nums {
-		distance += absInt(num)
+		distance += lib.AbsInt(num)
 	}
 
 	return distance

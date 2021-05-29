@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -10,7 +11,7 @@ func AnswerABC159Bその1(S string) string {
 	sLeft := S[:(N-1)/2]
 	sRight := S[(N+3)/2-1:]
 
-	if isPalindrome(S) && isPalindrome(sLeft) && isPalindrome(sRight) {
+	if lib.IsPalindrome(S) && lib.IsPalindrome(sLeft) && lib.IsPalindrome(sRight) {
 		return "Yes"
 	} else {
 		return "No"

@@ -1,14 +1,15 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
 // [ABC096B - Maximum Sum](https://atcoder.jp/contests/abc096/tasks/abc096_b)
 func AnswerABC096Bその1(A, B, C, K int) int {
 	nums := []int{A, B, C}
-	maxV := findMax(nums)
-	total := sumInts(nums)
+	maxV := lib.FindMax(nums)
+	total := lib.SumInts(nums)
 
 	double := maxV
 	for i := 0; i < K; i++ {

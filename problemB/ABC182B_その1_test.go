@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -9,7 +10,7 @@ func AnswerABC182Bその1(N int, A []int) int {
 	var maxGCD int
 	var ans int
 
-	for k := 2; k <= findMax(A); k++ {
+	for k := 2; k <= lib.FindMax(A); k++ {
 		gcd := 0
 
 		for j := 0; j < N; j++ {

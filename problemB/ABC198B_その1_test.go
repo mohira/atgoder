@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"strconv"
 	"testing"
 )
@@ -13,7 +14,7 @@ func AnswerABC198Bその1(N int) string {
 			zeros += "0"
 		}
 
-		if isPalindrome(zeros + strconv.Itoa(N)) {
+		if lib.IsPalindrome(zeros + strconv.Itoa(N)) {
 			return "Yes"
 		}
 	}

@@ -1,12 +1,13 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
 // [ABC033B - 町の合併](https://atcoder.jp/contests/abc033/tasks/abc033_b)
 func AnswerABC033Bその1(N int, S []string, P []int) string {
-	totalPeople := sumInts(P)
+	totalPeople := lib.SumInts(P)
 
 	for i := 0; i < N; i++ {
 		s, p := S[i], P[i]

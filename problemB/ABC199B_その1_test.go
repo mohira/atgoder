@@ -1,13 +1,14 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
 // [ABC199B - Intersection](https://atcoder.jp/contests/abc199/tasks/abc199_b)
 func AnswerABC199Bその1(N int, A []int, B []int) int {
-	maxA := findMax(A)
-	minB := findMin(B)
+	maxA := lib.FindMax(A)
+	minB := lib.FindMin(B)
 
 	if minB-maxA >= 0 {
 		return minB - maxA + 1

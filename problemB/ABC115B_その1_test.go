@@ -1,12 +1,13 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
 // [ABC115B - Christmas Eve Eve](https://atcoder.jp/contests/abc115/tasks/abc115_b)
 func AnswerABC115Bその1(N int, P []int) int {
-	return sumInts(P) - findMax(P)/2
+	return lib.SumInts(P) - lib.FindMax(P)/2
 }
 
 func TestAnswerABC115Bその1(t *testing.T) {

@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"fmt"
 	"strings"
 	"testing"
@@ -10,7 +11,7 @@ import (
 func AnswerABC050Bその1(N int, T []int, M int, PX [][]int) string {
 	var out strings.Builder
 
-	total := sumInts(T)
+	total := lib.SumInts(T)
 
 	for _, px := range PX {
 		p, x := px[0], px[1]

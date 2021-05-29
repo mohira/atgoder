@@ -1,12 +1,13 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
 // [ABC064B - Traveling AtCoDeer Problem](https://atcoder.jp/contests/abc077/tasks/abc077_b)
 func AnswerABC064Bその2(N int, A []int) int {
-	return findMax(A) - findMin(A)
+	return lib.FindMax(A) - lib.FindMin(A)
 }
 
 func TestAnswerABC064Bその2(t *testing.T) {

@@ -1,6 +1,7 @@
 package problemB
 
 import (
+	"atgoder/lib"
 	"testing"
 )
 
@@ -23,7 +24,7 @@ func AnswerABC185Bその1(N, M, T int, AB [][]int) string {
 
 		// 滞在時間分だけバッテリー回復(ただし、上限があることに注意)
 		滞在時間 := 出発予定時刻 - 到着時刻
-		battery = min(N, battery+滞在時間)
+		battery = lib.Min(N, battery+滞在時間)
 
 		// 入れ替え
 		出発時刻 = 出発予定時刻
