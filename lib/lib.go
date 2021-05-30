@@ -88,7 +88,7 @@ func IsUpper(r rune) bool {
 	return 'A' <= r && r <= 'Z'
 }
 
-// GCD greatest common divisor (GCD) via Euclidean algorithm
+// GCD 2つの整数の最大公約数を求める。ユークリッドの互除法で。
 func GCD(a, b int) int {
 	for b != 0 {
 		t := b
@@ -98,7 +98,7 @@ func GCD(a, b int) int {
 	return a
 }
 
-// LCM find Least Common Multiple (LCM) via GCD
+// LCM 整数スライスの最小公倍数を求める
 func LCM(integers []int) int {
 	a := integers[0]
 	b := integers[1]
