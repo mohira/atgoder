@@ -1,4 +1,4 @@
-package topic_integer_problem
+package topic_integer_problem_prime_factorization
 
 import (
 	"testing"

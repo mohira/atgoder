@@ -1,0 +1,1 @@
+# [AtCoder 版！マスター・オブ・整数 \(素因数分解編\) \- Qiita](https://qiita.com/drken/items/a14e9af0ca2d857dad23#8-5-%E7%B4%A0%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3-%E7%B4%84%E6%95%B0%E3%81%AE%E6%A7%8B%E9%80%A0)
