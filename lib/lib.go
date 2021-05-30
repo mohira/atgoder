@@ -111,8 +111,8 @@ func LCM(integers []int) int {
 	return result
 }
 
-// ある整数の桁数を返す
-func getDigitNums(N int) int {
+// GetDigitNums ある整数の桁数を返す
+func GetDigitNums(N int) int {
 	var digit int
 	for N > 0 {
 		N /= 10
