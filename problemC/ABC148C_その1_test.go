@@ -1,4 +1,4 @@
-package topic_amari
+package problemC
 
 import (
 	"atgoder/lib"
