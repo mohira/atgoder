@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-// [ABC064B - Traveling AtCoDeer Problem](https://atcoder.jp/contests/abc077/tasks/abc077_b)
+// [ABC064B - Traveling AtCoDeer Problem](https://atcoder.jp/contests/abc064/tasks/abc064_b)
 func AnswerABC064Bその1(N int, A []int) int {
 	sort.Ints(A)
 
