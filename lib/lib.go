@@ -1,6 +1,9 @@
 package lib
 
-import "math"
+import (
+	"errors"
+	"math"
+)
 
 func AbsInt(x int) int {
 	if x < 0 {
@@ -119,4 +122,21 @@ func GetDigitNums(N int) int {
 		digit++
 	}
 	return digit
+}
+
+// GetNumberOfDigits 非負の整数の桁数を求める
+func GetNumberOfDigits(n int) (int, error) {
+	switch {
+	case n < 0:
+		return 0, errors.New("マイナスは認めてないよ")
+	case n == 0:
+		return 1, nil
+	}
+
+	digit := 0
+	for n > 0 {
+		n /= 10
+		digit++
+	}
+	return digit, nil
 }
