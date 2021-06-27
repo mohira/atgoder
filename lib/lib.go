@@ -140,3 +140,16 @@ func GetNumberOfDigits(n int) (int, error) {
 	}
 	return digit, nil
 }
+
+// IsZoroNumber ある整数がゾロ目かどうか判定する
+func IsZoroNumber(n int) bool {
+	tmp := n
+
+	for d := n % 10; tmp > 0; tmp /= 10 {
+		if tmp%10 != d {
+			return false
+		}
+	}
+
+	return true
+}
