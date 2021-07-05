@@ -3,6 +3,8 @@ package lib
 import (
 	"errors"
 	"math"
+	"sort"
+	"strings"
 )
 
 func AbsInt(x int) int {
@@ -152,4 +154,22 @@ func IsZoroNumber(n int) bool {
 	}
 
 	return true
+}
+
+// MySortString 文字列を辞書順ソートしたコピーを返す
+func MySortString(s string) string {
+	strs := make([]string, len(s))
+	for i, c := range s {
+		strs[i] = string(c)
+	}
+	sort.Strings(strs)
+
+	var out strings.Builder
+	out.Grow(len(s))
+
+	for _, c := range strs {
+		out.WriteString(c)
+	}
+
+	return out.String()
 }
