@@ -164,12 +164,5 @@ func MySortString(s string) string {
 	}
 	sort.Strings(strs)
 
-	var out strings.Builder
-	out.Grow(len(s))
-
-	for _, c := range strs {
-		out.WriteString(c)
-	}
-
-	return out.String()
+	return strings.Join(strs, "")
 }
