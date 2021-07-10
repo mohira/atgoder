@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+// [EDPC A - Frog 1](https://atcoder.jp/contests/dp/tasks/dp_a)
 func AnswerEDPCAFrog1(N int, H []int) int {
 	dp := make([]int, N)
 
