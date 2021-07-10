@@ -1,7 +1,6 @@
 package topic_dp
 
 import (
-	"atgoder/lib"
 	"fmt"
 	"testing"
 )
@@ -11,12 +10,12 @@ func AnswerEDPCAFrog1(N int, H []int) int {
 
 	// 初期条件
 	dp[0] = 0
-	dp[1] = lib.AbsInt(H[1] - H[0])
+	dp[1] = AbsInt(H[1] - H[0])
 
 	for i := 2; i < N; i++ {
-		step1 := dp[i-1] + lib.AbsInt(H[i]-H[i-1]) // i+1 の足場へジャンプ
-		step2 := dp[i-2] + lib.AbsInt(H[i]-H[i-2]) // i+2 の足場へジャンプ
-		cost := lib.Min(step1, step2)
+		step1 := dp[i-1] + AbsInt(H[i]-H[i-1]) // i+1 の足場へジャンプ
+		step2 := dp[i-2] + AbsInt(H[i]-H[i-2]) // i+2 の足場へジャンプ
+		cost := Min(step1, step2)
 		dp[i] = cost
 	}
 
@@ -35,33 +34,33 @@ func 愚直に書いてDPに慣れる() {
 	dp[1] = H[1] - H[0]
 	fmt.Println(dp)
 
-	step1to3 := dp[1] + lib.AbsInt(H[2]-H[1])
-	step2to3 := dp[0] + lib.AbsInt(H[2]-H[0])
-	dp[2] = lib.Min(step1to3, step2to3)
+	step1to3 := dp[1] + AbsInt(H[2]-H[1])
+	step2to3 := dp[0] + AbsInt(H[2]-H[0])
+	dp[2] = Min(step1to3, step2to3)
 	fmt.Println(step1to3, step2to3)
 	fmt.Println(dp)
 
-	step1to4 := dp[2] + lib.AbsInt(H[3]-H[2])
-	step2to4 := dp[1] + lib.AbsInt(H[3]-H[1])
-	dp[3] = lib.Min(step1to4, step2to4)
+	step1to4 := dp[2] + AbsInt(H[3]-H[2])
+	step2to4 := dp[1] + AbsInt(H[3]-H[1])
+	dp[3] = Min(step1to4, step2to4)
 	fmt.Println(step1to4, step2to4)
 	fmt.Println(dp)
 
-	step1to5 := dp[3] + lib.AbsInt(H[4]-H[3])
-	step2to5 := dp[2] + lib.AbsInt(H[4]-H[2])
-	dp[4] = lib.Min(step1to5, step2to5)
+	step1to5 := dp[3] + AbsInt(H[4]-H[3])
+	step2to5 := dp[2] + AbsInt(H[4]-H[2])
+	dp[4] = Min(step1to5, step2to5)
 	fmt.Println(step1to5, step2to5)
 	fmt.Println(dp)
 
-	step1to6 := dp[4] + lib.AbsInt(H[5]-H[4])
-	step2to6 := dp[3] + lib.AbsInt(H[5]-H[3])
-	dp[5] = lib.Min(step1to6, step2to6)
+	step1to6 := dp[4] + AbsInt(H[5]-H[4])
+	step2to6 := dp[3] + AbsInt(H[5]-H[3])
+	dp[5] = Min(step1to6, step2to6)
 	fmt.Println(step1to6, step2to6)
 	fmt.Println(dp)
 
-	step1to7 := dp[5] + lib.AbsInt(H[6]-H[5])
-	step2to7 := dp[4] + lib.AbsInt(H[6]-H[4])
-	dp[6] = lib.Min(step1to7, step2to7)
+	step1to7 := dp[5] + AbsInt(H[6]-H[5])
+	step2to7 := dp[4] + AbsInt(H[6]-H[4])
+	dp[6] = Min(step1to7, step2to7)
 	fmt.Println(step1to7, step2to7)
 	fmt.Println(dp)
 }
