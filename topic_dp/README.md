@@ -2,10 +2,11 @@
 
 ## ABC129C
 
+- [AtCoder ABC 129 C - Typical Stairs (茶色, 300 点) - けんちょんの競プロ精進記録](https://drken1215.hatenablog.com/entry/2019/06/10/140000)
+
 ### 考察: 床が壊れていないケースを考える
 
-- [AtCoder ABC 129 C - Typical Stairs (茶色, 300 点) - けんちょんの競プロ精進記録](https://drken1215.hatenablog.com/entry/2019/06/10/140000)
-  <img width="2048" alt="image.png (5.6 MB)" src="https://img.esa.io/uploads/production/attachments/6586/2021/07/12/21054/4dd9c584-6987-487d-9769-ce518c499c5d.png">
+![](https://i.imgur.com/Gu9LSQb.jpg)
 
 ### 壊れているケースを考える
 
@@ -18,4 +19,4 @@ if oks[i-1] { dp[i] += dp[i-1]}
 if oks[i-2] { dp[i] += dp[i-2]}
 ```
 
-<img width="2048" alt="image.png (7.1 MB)" src="https://img.esa.io/uploads/production/attachments/6586/2021/07/12/21054/6604eaeb-34ce-4442-92d4-b93c0c22c7a0.png">
+![](https://i.imgur.com/lZXk8es.jpg)
