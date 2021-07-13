@@ -1,7 +1,5 @@
 package topic_dp
 
-import "math"
-
 func AbsInt(x int) int {
 	if x < 0 {
 		return -x
@@ -10,14 +8,16 @@ func AbsInt(x int) int {
 	}
 }
 
-func Min(nums ...int) int {
-	min := math.MaxInt64
-
-	for _, num := range nums {
-		if num < min {
-			min = num
-		}
+func ChMin(a *int, b int) {
+	if b < *a {
+		*a = b
 	}
+}
 
-	return min
+func Min(a, b int) int {
+	if a < b {
+		return a
+	} else {
+		return b
+	}
 }
