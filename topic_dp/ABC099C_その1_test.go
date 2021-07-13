@@ -6,7 +6,25 @@ import (
 
 // [ABC099C - Strange Bank](https://atcoder.jp/contests/abc099/tasks/abc099_c)
 func AnswerABC099Cその1(N int) int {
-	return 0
+	// dp[i] → i円の支払いに必要な最低の操作回数
+	dp := make([]int, N+1)
+	dp[0] = 0
+
+	for i := 1; i <= N; i++ {
+		dp[i] = 1 + dp[i-1] // 1円引き出し
+
+		// 6^N 円引き出し
+		for pow6 := 6; 0 <= i-pow6; pow6 *= 6 {
+			dp[i] = Min(dp[i], 1+dp[i-pow6])
+		}
+
+		// 9^N 円引き出し
+		for pow9 := 9; 0 <= i-pow9; pow9 *= 9 {
+			dp[i] = Min(dp[i], 1+dp[i-pow9])
+		}
+	}
+
+	return dp[N]
 }
 
 func TestAnswerABC099Cその1(t *testing.T) {
