@@ -20,3 +20,7 @@ if oks[i-2] { dp[i] += dp[i-2]}
 ```
 
 ![](https://i.imgur.com/lZXk8es.jpg)
+
+## [EDPC D - Knapsack 1](https://atcoder.jp/contests/dp/tasks/dp_d)
+
+<img width="1630" alt="image.png (3.3 MB)" src="https://img.esa.io/uploads/production/attachments/6586/2021/07/15/21054/895e282e-b3f1-484f-bd66-2757ec971984.png">
