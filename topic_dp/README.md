@@ -24,3 +24,27 @@ if oks[i-2] { dp[i] += dp[i-2]}
 ## [EDPC D - Knapsack 1](https://atcoder.jp/contests/dp/tasks/dp_d)
 
 <img width="1630" alt="image.png (3.3 MB)" src="https://img.esa.io/uploads/production/attachments/6586/2021/07/15/21054/895e282e-b3f1-484f-bd66-2757ec971984.png">
+
+## [EDPC F - LCS](https://atcoder.jp/contests/dp/tasks/dp_f)
+
+- 参考
+    - [【EDPC】F問題 LCS【全部やる】 - YouTube](https://www.youtube.com/watch?v=HKI3aTJz4LY)
+    - [(1) 情報工学概論（アルゴリズムとデータ構造）09動的計画法02編集距離 - YouTube](https://www.youtube.com/watch?v=VLC6h3GzSYo&list=PLCGPvL9AseS3AcyAYp8UL_CWoIhKyQv2I&index=4)
+        - 編集距離の話だけど、愚直にDPテーブルを作って遷移を調べるところはとても参考になる
+- 漸化式とテーブルの紐付けに苦労した
+    - 具体的なDPテーブルを書き出すことをやるとよい感じ
+    - 復元するときにもDPテーブルがある方がわかりやすい
+
+```
+// コードから入っていかないほうがいいかも？
+// この漸化式はわかるけど、わからない状態になりがちじゃない？
+dp[i][j] = max(
+    dp[i-1][j],
+    dp[i][j-1],
+    dp[i-1][j-1]+1,
+)
+```
+
+### 図解
+
+<img width="1280" alt="image.png (5.7 MB)" src="https://img.esa.io/uploads/production/attachments/6586/2021/07/19/21054/9bc71584-825a-48a6-9e14-006db27e00c1.png">
