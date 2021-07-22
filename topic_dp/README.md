@@ -47,19 +47,19 @@ dp[i][j] = max(
 
 ### 図解
 
-<img width="1280" alt="image.png (5.7 MB)" src="https://img.esa.io/uploads/production/attachments/6586/2021/07/19/21054/9bc71584-825a-48a6-9e14-006db27e00c1.png">
+![](https://i.imgur.com/TBwlg2D.jpg)
 
 ## [EPDC G - Longest Path](https://atcoder.jp/contests/dp/tasks/dp_g)
 
 - 参考
-    - [【EDPC】G問題 LongestPath【全部やる】 - YouTube](https://www.youtube.com/watch?v=U5geMnL9gGU)
+  - [【EDPC】G問題 LongestPath【全部やる】 - YouTube](https://www.youtube.com/watch?v=U5geMnL9gGU)
 - 発想
-    - 自分から見て、「次の頂点」の最長経路 + 1 を再帰的に求める
-    - グラフ情報は隣接リストでもっておくとわかりやすい
+  - 自分から見て、「次の頂点」の最長経路 + 1 を再帰的に求める
+  - グラフ情報は隣接リストでもっておくとわかりやすい
 - メモ化再帰の使い所
-    - 良い順番はありそう(今回はDAG)だが、**どの順番で埋めるかわからん**とき！
+  - 良い順番はありそう(今回はDAG)だが、**どの順番で埋めるかわからん**とき！
 
 ### 図解
 
-<img width="1280" alt="image.png (7.8 MB)" src="https://img.esa.io/uploads/production/attachments/6586/2021/07/21/21054/16bab336-c2b2-4ebf-b07c-06dc8b735542.png">
+![](https://i.imgur.com/X1WZiR4.jpg)
 
