@@ -1,5 +1,7 @@
 package topic_dp
 
+const MOD int = 1e+9 + 7
+
 func AbsInt(x int) int {
 	if x < 0 {
 		return -x
