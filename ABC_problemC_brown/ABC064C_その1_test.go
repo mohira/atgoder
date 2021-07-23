@@ -6,25 +6,26 @@ import (
 	"testing"
 )
 
-// [ABC064C - Bugged](https://atcoder.jp/contests/abc064/tasks/abc064_c)
+// [ABC064C - Colorful Leaderboard](https://atcoder.jp/contests/abc064/tasks/abc064_c)
 func AnswerABC064Cその1(N int, A []int) string {
 	bucket := make(map[string]int)
-	countWildCard := 0
+	wildCardCount := 0
 
 	for _, a := range A {
-		color := toColor(a)
-
-		if color != "*" {
-			bucket[color]++
+		c := toColor(a)
+		if c == "*" {
+			wildCardCount++
 		} else {
-			countWildCard++
+			bucket[c]++
 		}
 	}
 
-	maxColors := lib.Min(len(bucket)+countWildCard, 8)
-	minColors := lib.Max(len(bucket), 1)
+	uniqColors := len(bucket)
 
-	return fmt.Sprintf("%d %d", minColors, maxColors)
+	min := lib.Max(1, uniqColors)
+	max := uniqColors + wildCardCount
+
+	return fmt.Sprintf("%d %d", min, max)
 }
 
 func toColor(rate int) string {
@@ -62,7 +63,7 @@ func TestAnswerABC064Cその1(t *testing.T) {
 		{"入力例3", 20, []int{800, 810, 820, 830, 840, 850, 860, 870, 880, 890, 900, 910, 920, 930, 940, 950, 960, 970, 980, 990}, "1 1"},
 
 		{"自由に色を選べるレートしかない場合は最低1種類", 3, []int{3200, 3200, 3200}, "1 3"},
-		{"色種類は超えるのは無理", 9, []int{3200, 3200, 3200, 3200, 3200, 3200, 3200, 3200, 3200}, "1 8"},
+		{"色種類は超えてもOK", 9, []int{3200, 3200, 3200, 3200, 3200, 3200, 3200, 3200, 3200}, "1 9"},
 	}
 
 	for _, tt := range tests {
