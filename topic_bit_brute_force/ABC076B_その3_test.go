@@ -1,29 +1,28 @@
 package topic_bit_brute_force
 
 import (
+	"atgoder/lib"
 	"math"
 	"testing"
 )
 
 // [ABC076B - Addition and Multiplication](https://atcoder.jp/contests/abc076/tasks/abc076_b)
 func AnswerABC076Bその1(N, K int) int {
-	// ビット全探索
 	var ans = math.MaxInt64
 
 	for bit := 0; bit < (1 << N); bit++ {
-		tmp := 1
+		v := 1
 		for i := 0; i < N; i++ {
 			if (bit>>i)&1 == 1 {
 				// 操作A
-				tmp *= 2
+				v *= 2
 			} else {
 				// 操作B
-				tmp += K
+				v += K
 			}
 		}
-		ans = min(ans, tmp)
+		ans = lib.Min(ans, v)
 	}
-
 	return ans
 }
 

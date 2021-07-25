@@ -5,8 +5,8 @@ import (
 	"testing"
 )
 
-// [ABC080C - Train Ticket](https://atcoder.jp/contests/abc079/tasks/abc079_c)
-func AnswerABC080Cその1(ABCD string) string {
+// [ABC079C - Train Ticket](https://atcoder.jp/contests/abc079/tasks/abc079_c)
+func AnswerABC079Cその1(ABCD string) string {
 	// 扱いやすくするために整数スライスに変換する
 	var A = make([]int, 4)
 	for i, s := range ABCD {
@@ -43,7 +43,7 @@ func AnswerABC080Cその1(ABCD string) string {
 	return "" // 必ず 7 がつくれるのでここには到達しない
 }
 
-func TestAnswerABC080Cその1(t *testing.T) {
+func TestAnswerABC079Cその1(t *testing.T) {
 	tests := []struct {
 		name string
 		ABCD string
@@ -56,7 +56,7 @@ func TestAnswerABC080Cその1(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := AnswerABC080Cその1(tt.ABCD)
+			got := AnswerABC079Cその1(tt.ABCD)
 
 			if got != tt.want {
 				t.Errorf("got %v want %v", got, tt.want)
