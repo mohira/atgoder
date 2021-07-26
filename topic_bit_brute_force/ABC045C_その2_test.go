@@ -8,7 +8,7 @@ import (
 	"testing"
 )
 
-// [ABC045C - Bowls and Dishes](https://atcoder.jp/contests/abc045/tasks/abc045_c)
+// [ABC045C - たくさんの数式](https://atcoder.jp/contests/abc045/tasks/arc061_a)
 func AnswerABC045Cその2(S string) int {
 	var ans int
 
