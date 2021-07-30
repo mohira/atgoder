@@ -72,3 +72,16 @@ dp[i][j] = max(
 
 ![](https://i.imgur.com/4DX9JUS.jpg)
 
+## [EDPC I - Coins](https://atcoder.jp/contests/dp/tasks/dp_i)
+
+- いきなり実装しない！
+- まずは、手動で遷移を書き出して、テーブルを具体化しよう！
+- DAGであることもわかるね
+- 求める答えの実装も楽に考えられる
+
+### 図解
+
+![](https://i.imgur.com/NCW6n9K.jpg)
+
+
+
