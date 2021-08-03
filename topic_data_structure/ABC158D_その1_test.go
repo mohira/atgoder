@@ -1,4 +1,4 @@
-package topic_dp
+package topic_data_structure
 
 import (
 	"container/list"
