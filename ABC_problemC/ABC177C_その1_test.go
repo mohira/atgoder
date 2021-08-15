@@ -1,4 +1,4 @@
-package ABC_problemC_brown
+package ABC_problemC
 
 import (
 	"testing"
